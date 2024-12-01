@@ -1,121 +1,101 @@
 // Style your elements here
-import styled from 'styled-components'
 
-export const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: linear-gradient(${props => props.gradientColor});
-`
-export const ResponsiveContainer = styled.div`
-  width: 100%;
-  max-width: 1100px;
-`
+import styled from 'styled-components'
 export const GradientGeneratorContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background-image: linear-gradient(${props => props.gradientValue});
+  min-height: 100vh;
+`
+export const ResponsiveContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 550px;
+  @media screen and (min-width: 768px) {
+    width: 85%;
+    max-width: 1110px;
+  }
 `
 export const Heading = styled.h1`
-  font-size: 36px;
-  font-family: 'roboto';
+  color: #ffffff;
+  font-family: 'Roboto';
   font-weight: bold;
   text-align: center;
-  color: #ededed;
+  font-size: 24px;
   @media screen and (min-width: 768px) {
-    font-size: 48px;
+    font-size: 32px;
   }
 `
-export const CustomPara = styled.p`
-  font-size: 18px;
-  text-align: center;
+export const DirectionsDescription = styled.p`
   color: #ededed;
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-  }
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
 `
-export const DirectionList = styled.ul`
+export const GradientDirectionList = styled.ul`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  gap: 30px;
-  list-style-type: none;
-`
-export const PickColor = styled.p`
-  font-size: 18px;
-  text-align: center;
-  color: #ededed;
+  justify-content: space-between;
+  padding: 0;
   @media screen and (min-width: 768px) {
-    font-size: 22px;
-  }
+    width: 60%;
+    max-width: 425px;
+  } ;
 `
-export const PickColorContainer = styled.div`
+export const ColorPickersDescription = styled.p`
+  color: #ededed;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+`
+export const ColorPickerContainer = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  min-width: 320px;
+`
+export const CustomInputAndColorContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 40px;
-  padding: 20px 0 50px 0;
-  @media screen and (min-width: 768px) {
-    gap: 150px;
-  }
-`
-export const FromColorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
 `
-export const FromLabel = styled.label`
+export const ColorValue = styled.p`
+  color: #ffffff;
   font-size: 18px;
-  font-family: 'roboto';
-  color: #ededed;
-  padding: 10px 0;
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-  }
+  font-weight: 500;
 `
-export const FromColor = styled.input`
-  height: 100px;
-  width: 150px;
+export const CustomInput = styled.input`
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
   border: none;
+  border-radius: 10px;
   outline: none;
-  background: none;
-`
-export const ToColorContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-export const ToLabel = styled.label`
-  font-size: 18px;
-  font-family: 'roboto';
-  color: #ededed;
-  padding: 10px 0;
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-  }
-`
-export const ToColor = styled.input`
-  height: 100px;
-  width: 150px;
-  border: none;
-  outline: none;
-  background: none;
+  cursor: pointer;
 `
 export const GenerateButton = styled.button`
-  background-color: #00c9b7;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  padding: 10px 30px;
-  cursor: pointer;
   color: #1e293b;
-  font-size: 18px;
-  font-family: 'roboto';
-  font-weight: bold;
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-  }
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #00c9b7;
+  min-width: 25px;
+  border-radius: 6px;
+  border: none;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 24px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-top: 25px;
+  outline: none;
+  cursor: pointer;
 `
